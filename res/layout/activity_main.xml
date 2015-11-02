@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.speextest.MainActivity" >
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ebebeb"
+        android:divider="@null"
+        android:dividerHeight="10dp" >
+    </ListView>
+    
+     <TextView
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="#FFF"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="@string/hello_world"
+        android:textColor="#000"
+        android:visibility="visible" />
+
+    
+    <LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_gravity="center_vertical"  
+        android:layout_marginLeft="10dp"  
+        android:orientation="horizontal" >  
+  
+          <Button  
+            android:id="@+id/swButton"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_gravity="center_vertical"  
+            android:background="@drawable/button_recordnormal"
+            android:layout_marginLeft="20dp"  
+             android:layout_marginBottom="7dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#727272"
+            android:padding="5dp"
+            android:minHeight="0dp"
+            android:text="修改参数"/>  
+      
+            
+       <com.nickming.view.AudioRecordButton
+            android:id="@+id/recordButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" 
+            android:background="@drawable/button_recordnormal"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="20dp"
+            
+            android:minHeight="0dp"
+            android:padding="5dp"
+            android:text="@string/normal"
+            android:textColor="#727272" >
+        </com.nickming.view.AudioRecordButton>
+  
+        
+    </LinearLayout>  
+    
+    <LinearLayout  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"    
+        android:orientation="horizontal"
+         >  
+   
+     <EditText
+         android:id="@+id/comTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:hint="压缩率：0-10"
+         android:visibility="gone"
+         /> 
+     <Button  
+            android:id="@+id/setComButton"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"   
+            android:text="设定压缩率"
+            android:visibility="gone"
+           /> 
+    </LinearLayout> 
+    
+    <LinearLayout  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"    
+        android:orientation="horizontal" >  
+   
+     <EditText
+         android:id="@+id/timTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:hint="：切包大小:10-2500ms"
+         android:visibility="gone"
+         /> 
+     <Button  
+            android:id="@+id/setTimButton"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"   
+            android:visibility="gone"
+            android:text="设定包长度"
+           /> 
+    </LinearLayout>
+    
+    
+
+</LinearLayout>
